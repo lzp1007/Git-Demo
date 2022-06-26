@@ -1,12 +1,14 @@
 package com.duyi;
 
+import com.duyi.annotation.MyAnnotation;
+
 import java.lang.annotation.*;
 
 
-@MyAnnotation
+@MyAnnotation5
 public class MainTest5 {
 	@Override
-	@MyAnnotation(age = 22)
+	@MyAnnotation5(age = 22)
 	public String toString() {
 		
 		return super.toString();
@@ -22,7 +24,7 @@ public class MainTest5 {
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(value = {ElementType.TYPE, ElementType.METHOD})
-@interface MyAnnotation {
+@interface MyAnnotation5 {
 	int age() default 18;
 	String name() default "lzp";
 }
